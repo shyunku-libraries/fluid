@@ -1,8 +1,8 @@
 interface HTMLAttributes<T> {
   id?: string;
-  className?: string;
+  class?: string;
   style?: Record<string, string>;
-  onClick?: (event: MouseEvent) => void;
+  "on:click"?: (event: MouseEvent) => void;
 }
 
 interface AnchorAttributes extends HTMLAttributes<HTMLAnchorElement> {

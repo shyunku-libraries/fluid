@@ -22,6 +22,7 @@ export function render(vnode: VNode | string): Node {
 
   Object.entries(vnode.props).forEach(([key, value]) => {
     node.setAttribute(key, value);
+    console.log("attribute", key, value);
   });
 
   vnode.children.forEach((child: any) => {

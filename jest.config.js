@@ -4,6 +4,7 @@ export default {
   testEnvironment: "jsdom",
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
+    // "^.+\\.fluid$": "./build/fluid-core/src/JestFluidTransformer",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };

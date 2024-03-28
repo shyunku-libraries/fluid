@@ -1,5 +1,5 @@
-import { VNode } from "../shared/FluidDOMTypes";
-import { createElement, render } from "./FluidDOM";
+import { VNode } from "fluid-dom/src/shared/FluidDOMTypes";
+import { createElement, render } from "fluid-dom/src/client/FluidDOM";
 
 describe("FluidDOM", () => {
   it("should pass", () => {
@@ -14,7 +14,7 @@ describe("FluidDOM", () => {
 describe("FluidDOM jsx", () => {
   it("should pass", () => {
     const testRoot: VNode = (
-      <div className="source">
+      <div class="source" on:click={(e) => console.log(e)}>
         <h1>Hello, World!</h1>
         <p>This is a paragraph</p>
       </div>
@@ -22,6 +22,6 @@ describe("FluidDOM jsx", () => {
     const rootNode: Node = render(testRoot);
     document.body.appendChild(rootNode);
 
-    expect(document.body.innerHTML).toBe("<div><h1>Hello, World!</h1><p>This is a paragraph</p></div>");
+    expect(document.body.innerHTML).toBe('<div class="source"><h1>Hello, World!</h1><p>This is a paragraph</p></div>');
   });
 });
